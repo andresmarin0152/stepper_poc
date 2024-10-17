@@ -1,50 +1,95 @@
-# React + TypeScript + Vite
+# Design Document: Multi-step Subscription Form 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+A multi-step subscription form built with React, TypeScript, Tailwind CSS, shadcn/ui, and Zustand, following Atomic Design principles.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React + TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Zustand
+- Node V21.1.0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Architecture Overview
 
-## Expanding the ESLint configuration
+### 1. Atomic Design Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![alt text](src/assets/images/structured.png)
 
-- Configure the top-level `parserOptions` property like this:
+#### Atoms (Basic Components)
+- Input fields (text, email, phone)
+- Labels
+- Error messages
+- Checkboxes
+- Toggle switch (monthly/yearly billing)
+- Buttons (Next, Cancel)
+- Progress indicators
+- Price tags
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+#### Molecules (Composite Components)
+- Form field groups (label + input + error)
+- Plan card (title, price, description, features)
+- Additional card (checkbox + title + description + price)
+- Summary item (service + price)
+- Step indicator (number + title)
+
+#### Organisms (Complex Components)
+- Personal information form (Step 1)
+- Plan selection form (Step 2)
+- Additional selection form (Step 3)
+- Summary form (Step 4)
+- Navigation controls
+- Progress bar
+
+#### Templates
+- Step layout template
+- Mobile layout template
+- Desktop layout template
+
+#### Pages
+- Main stepper page
+
+### 2. File Structure
+
+![alt text](src/assets/images/atomDesign.png)
+
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+src/
+├── assets/
+│   ├── icons/
+│   ├── images/
+│   └── styles/
+├── components/
+│   ├── atoms/
+│   │   ├── Button/
+│   │   ├── Input/
+│   │   ├── Label/
+│   │   └── ErrorMessage/
+│   ├── molecules/
+│   │   ├── FormField/
+│   │   ├── PlanCard/
+│   │   ├── AddOnCard/
+│   │   └── StepIndicator/
+│   ├── organisms/
+│   │   ├── PersonalInfoForm/
+│   │   ├── PlanSelectionForm/
+│   │   ├── AddOnsForm/
+│   │   └── SummaryForm/
+│   └── templates/
+│       ├── StepLayout/
+│       └── FormLayout/
+├── pages/
+│   └── RegisterForm/
+├── utils/
+│   ├── validation.ts
+│   └── formatters.ts
+├── store/
+│   └── useFormStore.ts
+├── services
+│   └── serviceMock.ts
+├── router.ts
+|-- tailwind.config.js
+|-- tsconfig.json
+|-- vite.config.ts
+└── app.ts
 ```
