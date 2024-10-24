@@ -1,7 +1,32 @@
 # Design Document: Multi-step Subscription Form 🚀
 
 ## Project Overview
-A multi-step subscription form built with React, TypeScript, Tailwind CSS, shadcn/ui, and Zustand, following Atomic Design principles.
+A multi-step subscription form built with React, TypeScript, Tailwind CSS, Shadcn/ui, and Zustand, following Atomic Design principles.
+
+## Architecture Decisions
+
+### Overview
+In this project, we've chosen to implement Atomic Design methodology. This decision was driven by our desire to explore modern architecture patterns in a controlled environment before implementing them in larger-scale production projects.
+
+### Why Atomic Design?
+
+#### Rationale
+1. **Scalability Testing**: The project's scope provides an ideal testing ground for Atomic Design principles without the complexity of a full-scale application
+2. **Component Reusability**: The form's modular nature aligns perfectly with Atomic Design's component hierarchy
+3. **Learning Opportunity**: Allows the team to evaluate the methodology's pros and cons in a controlled environment
+4. **Future Implementation Insights**: Provides valuable insights for future enterprise-level implementations
+
+#### Expected Benefits
+- Clear component hierarchy
+- Improved maintenance
+- Consistent design language
+- Efficient development workflow
+- Better team collaboration
+
+#### Potential Challenges
+- Initial setup overhead
+- Learning curve for team members
+- Potential over-engineering for simple components
 
 ## Tech Stack
 - React + TypeScript
