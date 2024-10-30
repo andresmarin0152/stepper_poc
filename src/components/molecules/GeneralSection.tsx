@@ -1,11 +1,9 @@
-import TitleSection from "../atoms/TitleSection";
-import DescriptionSection from "../atoms/DescriptionSection";
+import PersonalInformationStep from "../organisms/PersonalInformationStep";
 
 const GeneralSection = () => {
   return (
-    <article className="flex flex-col gap-2">
-      <TitleSection title="Personal Information" index={1} />
-      <DescriptionSection />
+    <article className="flex flex-row gap-2">
+      <PersonalInformationStep/>
     </article>
   );
 };
