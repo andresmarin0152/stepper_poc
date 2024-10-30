@@ -1,8 +1,8 @@
 const TitlePage = () => {
   return (
-    <section className="flex flex-col justify-center items-center">
-      <h3 className="font-semibold text-[#3C4257] text-2xl">TitlePage</h3>
-      <p className="text-[#3C4257] text-base">Become to partner</p>
+    <section className="flex flex-col justify-start px-16 pt-12 w-full">
+      <h3 className="font-semibold text-2xl text-gray-primary-title">Join us</h3>
+      <p className="text-base text-gray-primary-title">Become to partner</p>
     </section>
   );
 };

@@ -1,0 +1,12 @@
+.stepIndicator::after {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  right: -32px;
+} 
+
+.stepContainer:last-child::after {
+  content: 'v';
+}
