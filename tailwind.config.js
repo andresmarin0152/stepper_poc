@@ -8,6 +8,7 @@ module.exports = {
   			'gray-primary-title': '#3C4257',
   			'gray-secondary-text': '#9FA6B2',
         "purple-primary-title": "#7B61FF",
+		'bg-primary': '#E3E8EE',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
