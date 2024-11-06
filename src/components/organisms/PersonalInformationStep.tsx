@@ -4,12 +4,12 @@ import PersonalInformationForm from "@/components/molecules/PersonalInformationF
 
 const PersonalInfformationStep = () => {
   return (
-    <section className="flex flex-row gap-2">
-        <section className="flex flex-col gap-2 w-1/2 p-6">
+    <section className="flex md:flex-row flex-col gap-8 md:gap-2">
+        <section className="flex flex-col gap-4 md:gap-2 md:w-1/2">
             <TitleSection title="Personal Information" index={1} />
             <DescriptionSection />
         </section>
-        <section className="w-1/2 p-6">
+        <section className="md:w-1/2">
             <PersonalInformationForm />
         </section>
     </section>

@@ -10,7 +10,7 @@ interface Props {
 
 const InputWithLabel=({id, label, type, placeholder}: Props)=> { 
   return (
-    <div className="grid w-full max-w-sm items-center gap-1.5">
+    <div className="items-center gap-1.5 grid w-full md:max-w-sm">
       <Label htmlFor="email">{label}</Label>
       <Input type={type} id={id} placeholder={placeholder} />
     </div>
