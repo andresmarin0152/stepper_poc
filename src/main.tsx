@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./assets/styles/App.css";
-import RegisterTemplate from "./templates/RegisterTemplate";
+import RegisterTemplate from "./templatesReact/RegisterTemplate";
 import { steps } from "./utils/steps";
 import Register from "./pages/Register";
 
