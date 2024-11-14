@@ -1,6 +1,7 @@
+import { StepEnum } from "@/utils/steps";
 
 export interface Step {
-    title: string;
-    currentStep: number;
-    isActive?: boolean;
-  }
+  title: string;
+  accesor: StepEnum;
+  currentStep: number;
+}

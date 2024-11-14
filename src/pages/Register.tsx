@@ -1,11 +1,7 @@
-import GeneralSection from "../components/molecules/GeneralSection";
+import GeneralSection from "./GeneralSection";
 
 const Register = () => {
-  return (
-    <section>
-      <GeneralSection />
-    </section>
-  );
+  return <section>{/* <GeneralSection /> */}</section>;
 };
 
 export default Register;
