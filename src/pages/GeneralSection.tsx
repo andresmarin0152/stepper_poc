@@ -12,14 +12,23 @@ const GeneralSection = () => {
     }
     setCurrentStep(steps[currentStep.accesor + 1]);
   }
+
+  function handlePreviousStep() {
+    if (currentStep.accesor === steps[0].accesor) {
+      return;
+    }
+    setCurrentStep(steps[currentStep.accesor - 1]);
+  }
+
   return (
     <article className="flex flex-row gap-2">
       <RegisterTemplate
         steps={steps}
         currentStep={currentStep}
         handleNextStep={handleNextStep}
+        handlePreviousStep={handlePreviousStep}
       >
-        <Register />
+        <Register currentStep={currentStep} />
       </RegisterTemplate>
     </article>
   );
