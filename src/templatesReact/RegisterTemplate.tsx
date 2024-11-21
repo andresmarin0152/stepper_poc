@@ -23,7 +23,7 @@ const RegisterTemplate = ({
         <TitlePage />
         <ProgressBar steps={steps} currentStep={currentStep} />
       </header>
-      <section className="px-11 md:px-40 py-5 md:py-20 h-[50dvh]">
+      <section className="px-11 md:px-40 py-5 md:py-20 min-h-[50dvh]">
         {children}
       </section>
       <section className="bottom-0 flex md:justify-end bg-bg-primary px-11 md:px-40 py-5 w-full h-[25dvh] md:h-[20dvh]">
