@@ -13,7 +13,7 @@ const mappedComponents = {
 };
 
 const Register = ({ currentStep }: { currentStep: Step }) => {
-  const CurrentComponent = mappedComponents[currentStep.accesor];
+  const CurrentComponent = mappedComponents[currentStep.accessor];
 
   return (
     <section>
