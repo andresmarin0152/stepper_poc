@@ -15,7 +15,7 @@ const ProgressBar = ({
         <StepIndicator
           key={index}
           step={step}
-          isActive={step.accesor === currentStep.accesor}
+          isActive={step.accessor === currentStep.accessor}
         />
       ))}
     </div>

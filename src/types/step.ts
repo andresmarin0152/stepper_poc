@@ -2,6 +2,6 @@ import { StepEnum } from "@/utils/steps";
 
 export interface Step {
   title: string;
-  accesor: StepEnum;
+  accessor: StepEnum;
   currentStep: number;
 }

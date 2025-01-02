@@ -10,22 +10,22 @@ export enum StepEnum {
 export const steps: Step[] = [
   {
     title: "Personal Info",
-    accesor: StepEnum.PersonalInfo,
+    accessor: StepEnum.PersonalInfo,
     currentStep: 1,
   },
   {
     title: "Select plan",
-    accesor: StepEnum.SelectPlan,
+    accessor: StepEnum.SelectPlan,
     currentStep: 2,
   },
   {
     title: "Complements",
     currentStep: 3,
-    accesor: StepEnum.Complements,
+    accessor: StepEnum.Complements,
   },
   {
     title: "Checkout",
-    accesor: StepEnum.Checkout,
+    accessor: StepEnum.Checkout,
     currentStep: 4,
   },
 ];

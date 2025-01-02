@@ -7,17 +7,17 @@ const GeneralSection = () => {
   const [currentStep, setCurrentStep] = useState(steps[0]);
 
   function handleNextStep() {
-    if (currentStep.accesor === steps[steps.length - 1].accesor) {
+    if (currentStep.accessor === steps[steps.length - 1].accessor) {
       return;
     }
-    setCurrentStep(steps[currentStep.accesor + 1]);
+    setCurrentStep(steps[currentStep.accessor + 1]);
   }
 
   function handlePreviousStep() {
-    if (currentStep.accesor === steps[0].accesor) {
+    if (currentStep.accessor === steps[0].accessor) {
       return;
     }
-    setCurrentStep(steps[currentStep.accesor - 1]);
+    setCurrentStep(steps[currentStep.accessor - 1]);
   }
 
   return (

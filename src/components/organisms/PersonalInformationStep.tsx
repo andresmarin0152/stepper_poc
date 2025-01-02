@@ -2,7 +2,7 @@ import TitleSection from "../atoms/TitleSection";
 import DescriptionSection from "../atoms/DescriptionSection";
 import PersonalInformationForm from "@/components/molecules/PersonalInformationForm";
 
-const PersonalInfformationStep = () => {
+const PersonalInformationStep = () => {
   return (
     <section className="flex md:flex-row flex-col gap-8 md:gap-2">
         <section className="flex flex-col gap-4 md:gap-2 md:w-1/2">
@@ -16,4 +16,4 @@ const PersonalInfformationStep = () => {
   );
 };      
 
-export default PersonalInfformationStep;    
+export default PersonalInformationStep;    

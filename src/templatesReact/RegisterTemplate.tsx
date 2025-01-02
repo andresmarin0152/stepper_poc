@@ -29,10 +29,10 @@ const RegisterTemplate = ({
       <section className="bottom-0 flex md:justify-end bg-bg-primary px-11 md:px-40 py-5 w-full h-[25dvh] md:h-[20dvh]">
         <div className="gap-3 grid grid-cols-2 w-full md:w-[50%] h-[25dvh] md:h-[20dvh]">
           <Button variant={"outline"} onClick={handlePreviousStep}>
-            {currentStep.accesor === StepEnum.PersonalInfo ? "Cancel" : "Back"}
+            {currentStep.accessor === StepEnum.PersonalInfo ? "Cancel" : "Back"}
           </Button>
           <Button className="bg-purple-primary-title" onClick={handleNextStep}>
-            {currentStep.accesor === StepEnum.Checkout ? "Finish" : "Next"}
+            {currentStep.accessor === StepEnum.Checkout ? "Finish" : "Next"}
           </Button>
         </div>
       </section>
